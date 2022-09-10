@@ -8,7 +8,7 @@ degrees = [0, 45, 90, 135]
 def build_stg_unit(d):
     return {
         "type": "rect",
-        "x": 26.520185,
+        "x": 25.520185,
         "y": 14.764094,
         "width": 4.4080563,
         "height": 22.679024,
@@ -23,7 +23,7 @@ for degree in degrees:
 stargate_unit.append(
     {
         "type": "circle",
-        "x": 28.670834,
+        "x": 27.670834,
         "y": 26.170834,
         "stroke_width": 0.619355,
         "radius": 15.361156,

@@ -1,0 +1,13 @@
+/.idea/.gitignore
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/starforce-counter-sheet.iml
+/.idea/vcs.xml
+/__pycache__/models.cpython-39.pyc
+/units/__pycache__/base.cpython-39.pyc
+/units/__pycache__/starforce.cpython-39.pyc
+/units/__pycache__/stargate.cpython-39.pyc
+/units/__pycache__/*.pyc
+/__pycache__/*.pyc

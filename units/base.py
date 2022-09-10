@@ -37,8 +37,22 @@ def build_text(params) -> svg.Text:
     )
 
 
-def build_unit(unit_def, color, fill, letter, text_class, x_offset, y_offset) -> [svg.SVG]:
-    elements = [build_rect({
+def build_centered_text(params) -> svg.Text:
+    return svg.Text(
+        x=params["x"],
+        y=params["y"],
+        class_=params["text_class"],
+        elements=[
+            svg.TSpan(
+                text=params["text"],
+                text_anchor="middle"
+            )
+        ]
+    )
+
+
+def build_border(color, fill, x_offset, y_offset) -> svg.Rect:
+    return build_rect({
         "type": "rect",
         "x": 0 + x_offset,
         "y": 0 + y_offset,
@@ -48,7 +62,11 @@ def build_unit(unit_def, color, fill, letter, text_class, x_offset, y_offset) ->
         "stroke": color,
         "stroke_width": 0.0950182,
         "rotate": 0
-    })]
+    })
+
+
+def build_unit(unit_def, color, fill, letter, text_class, x_offset, y_offset) -> [svg.SVG]:
+    elements = [build_border(color, fill, x_offset, y_offset)]
 
     for item in unit_def:
         params = item.copy()
